@@ -1,11 +1,12 @@
 import express from 'express';
 
 const host = process.env.HOST ?? 'localhost';
-const port = process.env.PORT ? Number(process.env.PORT) : 3000;
+const port = process.env.PORT ? Number(process.env.PORT) : 4000;
 
 const app = express();
 
 app.get('/', (req, res) => {
+  console.log(req.query.q);
   res.send({ message: 'Hello API' });
 });
 
