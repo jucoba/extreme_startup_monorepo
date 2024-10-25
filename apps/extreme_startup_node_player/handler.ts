@@ -9,9 +9,7 @@ app.use(express.json());
 
 app.get("/", async (req, res, next) => {
     const { q } = req.body;
-  return res.status(200).json({
-    message: response(q)
-  });
+  return res.status(200).send(response(q));
 });
 
 
