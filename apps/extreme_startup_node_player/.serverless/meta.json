@@ -1,0 +1,111 @@
+{
+  "/Users/jubelalbertocorrea/development/extreme_startup_monorepo/apps/extreme_startup_node_player": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.7",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>"
+    },
+    "composeServiceName": null,
+    "servicePath": "/Users/jubelalbertocorrea/development/extreme_startup_monorepo/apps/extreme_startup_node_player",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "org": "aqua10x",
+      "app": "extreeme-startup-players",
+      "service": "extreeme-startup-player",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs20.x",
+        "httpApi": {
+          "cors": true
+        },
+        "stage": "dev",
+        "region": "us-east-1",
+        "versionFunctions": true
+      },
+      "functions": {
+        "player1": {
+          "handler": "handler.handler",
+          "timeout": 28,
+          "events": [
+            {
+              "httpApi": {
+                "path": "/",
+                "method": "GET"
+              }
+            }
+          ],
+          "name": "extreeme-startup-player-dev-player1"
+        }
+      }
+    },
+    "serviceRawFile": "# \"org\" ensures this Service is used with the correct Serverless Framework Access Key.\norg: aqua10x\n# \"app\" enables Serverless Framework Dashboard features and sharing them with other Services.\napp: extreeme-startup-players\n# \"service\" is the name of this project. This will also be added to your AWS resource names.\nservice:  extreeme-startup-player\n\nprovider:\n  name: aws\n  runtime: nodejs20.x\n  httpApi:\n    cors: true\n\n\nfunctions:\n  player1:\n    handler: handler.handler\n    timeout: 28\n    events:\n      - httpApi:\n          path: /           # Route for the root path\n          method: GET\n",
+    "command": [
+      "remove"
+    ],
+    "options": {},
+    "error": null,
+    "params": {},
+    "machineId": "7a7cacc24fcbe82732ded84de7691475",
+    "stage": "dev",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "1bef86ec-feef-44ce-b1c9-e198ef331a79",
+    "orgName": "aqua10x",
+    "userId": "nlj0dT1jCqPCsqQ5Rz",
+    "dashboard": {
+      "isEnabledForService": true,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": {
+        "providers": false,
+        "monitoring": false
+      },
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": "N3lPSV09kbqL2k35SY",
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "mootrack",
+    "subscription": null,
+    "userEmail": "alberto.correa@gmail.com",
+    "serviceProviderAwsRegion": "us-east-1",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "021891591841",
+    "projectType": "traditional",
+    "versionSf": "4.4.7",
+    "serviceProviderAwsCfStackName": "extreeme-startup-player-dev",
+    "serviceUniqueId": "arn:aws:cloudformation:us-east-1:021891591841:stack/extreeme-startup-player-dev/267fefe0-92fb-11ef-8bb1-12b88a004b91",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:021891591841:stack/extreeme-startup-player-dev/267fefe0-92fb-11ef-8bb1-12b88a004b91",
+    "serviceProviderAwsCfStackCreated": "2024-10-25T18:01:25.352Z",
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": "CREATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "Player1LambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-1:021891591841:function:extreeme-startup-player-dev-player1:1",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-extreeme-startup-player-dev-Player1LambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "HttpApiId",
+        "OutputValue": "xcd0kcfl2e",
+        "Description": "Id of the HTTP API",
+        "ExportName": "sls-extreeme-startup-player-dev-HttpApiId"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "serverless-framework-deployments-us-east-1-08d70a82-4b30",
+        "ExportName": "sls-extreeme-startup-player-dev-ServerlessDeploymentBucketName"
+      },
+      {
+        "OutputKey": "HttpApiUrl",
+        "OutputValue": "https://xcd0kcfl2e.execute-api.us-east-1.amazonaws.com",
+        "Description": "URL of the HTTP API",
+        "ExportName": "sls-extreeme-startup-player-dev-HttpApiUrl"
+      }
+    ],
+    "integrations": {}
+  }
+}

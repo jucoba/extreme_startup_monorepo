@@ -1,0 +1,22 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: aqua10x
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: extreeme-startup-players
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service:  extreeme-startup-player
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  httpApi:
+    cors: true
+
+
+functions:
+  player1:
+    handler: handler.handler
+    timeout: 28
+    events:
+      - httpApi:
+          path: /           # Route for the root path
+          method: GET
