@@ -1,4 +1,3 @@
-export function response(question:string) {
-    console.log(question);
+export function response(question:string) {    
     return "I'm on it";
 }

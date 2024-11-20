@@ -8,8 +8,11 @@ app.use(express.json());
 
 
 app.get("/", async (req, res, next) => {
-    const { q } = req.body;
-  return res.status(200).send(response(q));
+  console.log("Question: ", req.query.q);
+  const query  = req.query.q?.toString()
+  if (query)
+    return res.status(200).send(response(query));
+  return res.status(400).send("No query");
 });
 
 
