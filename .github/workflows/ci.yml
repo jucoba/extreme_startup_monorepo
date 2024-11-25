@@ -35,12 +35,9 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
 
       - name: serverless deploy    
-        uses: serverless/github-action@v3.2        
-        with:
-          path: apps/extreme_startup_node_player
-          args: deploy
         env:
-          SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
+          SERVERLESS_ACCESS_KEY:  ${{ secrets.SERVERLESS_ACCESS_KEY }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: us-east-1 
+        run: |          
+          npx nx deploy extreme_startup_node_player

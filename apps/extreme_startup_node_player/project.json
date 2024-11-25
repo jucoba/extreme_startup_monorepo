@@ -5,6 +5,13 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "deploy": {
+      "executor": "nx:run-commands",
+      "cwd": "apps/api",
+      "options": {
+        "command": "cd apps/extreme_startup_node_player; npx serverless deploy"
+      }
+    },
     "build": {
       "executor": "@nx/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
