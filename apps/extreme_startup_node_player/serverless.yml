@@ -3,7 +3,7 @@ org: aqua10x
 # "app" enables Serverless Framework Dashboard features and sharing them with other Services.
 app: extreeme-startup-players
 # "service" is the name of this project. This will also be added to your AWS resource names.
-service:  extreeme-startup-player1
+service:  extreeme-startup-team2
 
 provider:
   name: aws
@@ -13,7 +13,7 @@ provider:
 
 
 functions:
-  team1:
+  team2:
     handler: handler.handler
     timeout: 28
     events:
